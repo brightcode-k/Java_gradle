@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="javatest.TestMainFunc" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-19T21:30:03" hostname="DESKTOP-L2D1GA5" time="2.0">
+  <properties/>
+  <testcase name="main()" classname="javatest.TestMainFunc" time="2.0"/>
+  <system-out><![CDATA[Path to the file: 
+C:\Java Intellig IDEA\JavaGradleProject\result.txt
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
