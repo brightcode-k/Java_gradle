@@ -21,12 +21,9 @@ class TestMainFunc {
         InputString testing_input = mock(InputString.class);
         when(testing_input.input("Enter file name (example - files/file.csv): ")).thenReturn("file.csv");
         when(testing_input.input("Enter separator: ")).thenReturn("+");
-
         main_for_test(testing_input);
-
         verify(testing_input).input("Enter file name (example - files/file.csv): ");
         verify(testing_input).input("Enter separator: ");
-
         File file = new File("result.txt");
         Scanner scanner = new Scanner(file);
         List<String> lines = new ArrayList<>();

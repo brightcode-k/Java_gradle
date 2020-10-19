@@ -11,33 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ParserTest {
 
     @Test
-    public void test_custom_delimeter() {
-        String line = "11|AU|Australia";
-
-        String result = Parser.LineParser(line, "+", '|');
-
-        assertNotEquals(result, null);
-        assertEquals(result.length(), 5);
-        assertEquals(result.charAt(1), '+');
-        assertEquals(result.charAt(2), '2');
-        assertEquals(result.charAt(4), '9');
-    }
-
-    @Test
-    public void test_custom_delimeter_and_separator() {
-        String line = "'11'|'AU'|'Australia'";
-
-        String result = Parser.LineParser(line, "#", '|');
-
-        assertNotEquals(result, null);
-        assertEquals(result.length(), 6);
-        assertEquals(result.charAt(1), '#');
-        assertEquals(result.charAt(2), '4');
-        assertEquals(result.charAt(4), '1');
-        assertEquals(result.charAt(5), '1');
-    }
-
-    @Test
     public void test_delimeter_and_separator_but_delimeter_in_column() {
         String line = "'11'|'AU'|'Austr|alia'";
 
@@ -119,6 +92,33 @@ class ParserTest {
         assertEquals(result.charAt(2), '0');
         assertEquals(result.charAt(3), '+');
         assertEquals(result.charAt(4), '7');
+    }
+
+    @Test
+    public void test_custom_delimeter() {
+        String line = "11|AU|Australia";
+
+        String result = Parser.LineParser(line, "+", '|');
+
+        assertNotEquals(result, null);
+        assertEquals(result.length(), 5);
+        assertEquals(result.charAt(1), '+');
+        assertEquals(result.charAt(2), '2');
+        assertEquals(result.charAt(4), '9');
+    }
+
+    @Test
+    public void test_custom_delimeter_and_separator() {
+        String line = "'11'|'AU'|'Australia'";
+
+        String result = Parser.LineParser(line, "#", '|');
+
+        assertNotEquals(result, null);
+        assertEquals(result.length(), 6);
+        assertEquals(result.charAt(1), '#');
+        assertEquals(result.charAt(2), '4');
+        assertEquals(result.charAt(4), '1');
+        assertEquals(result.charAt(5), '1');
     }
 
     @Test

@@ -27,15 +27,15 @@ class FilereaderTest {
 
         Stream<String> actual = fileReader.read("tests.csv");
 
-        assertStreamEquals(expected, actual);
+        assertStreamEquals_for_files(expected, actual);
     }
 
     @Test
-    void givenNonExistentFile_whenRead_thenFileNotFoundExceptionWithFileName() {
+    void given_non_existent_file_when_read_then_file_not_found_exception() {
         assertThrows(FileNotFoundException.class, () -> fileReader.read("INCORRECT"), "\"There is no file with name/missing file: \"INCORRECT\"");
     }
 
-    private static void assertStreamEquals(Stream<?> first, Stream<?> second) {
+    private static void assertStreamEquals_for_files(Stream<?> first, Stream<?> second) {
         Iterator<?> firstIterator = first.iterator(), secondIterator = second.iterator();
         while (firstIterator.hasNext() && secondIterator.hasNext())
             assertEquals(firstIterator.next(), secondIterator.next());
