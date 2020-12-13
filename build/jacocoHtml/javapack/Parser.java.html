@@ -4,54 +4,54 @@
 <span class="nc" id="L4">public class Parser {</span>
 
     public static String LineParser(String cvsText, String separator_in_final_result, char delimeter) {
-<span class="fc" id="L7">        StringBuilder complete_line = new StringBuilder();</span>
-<span class="fc bfc" id="L8" title="All 6 branches covered.">        if (cvsText == null || cvsText.isEmpty() || cvsText.isBlank()) {</span>
-<span class="fc" id="L9">            return complete_line.toString();</span>
+<span class="nc" id="L7">        StringBuilder complete_line = new StringBuilder();</span>
+<span class="nc bnc" id="L8" title="All 6 branches missed.">        if (cvsText == null || cvsText.isEmpty() || cvsText.isBlank()) {</span>
+<span class="nc" id="L9">            return complete_line.toString();</span>
         }
-<span class="fc" id="L11">        int iterator = 0;</span>
-<span class="fc" id="L12">        boolean first_boolean_quote = false;</span>
-<span class="fc" id="L13">        boolean second_boolean_comma = false;</span>
-<span class="fc bfc" id="L14" title="All 2 branches covered.">        while(!cvsText.isEmpty()) {</span>
-<span class="pc bpc" id="L15" title="1 of 6 branches missed.">            if(cvsText.startsWith(String.valueOf(delimeter)) &amp;&amp; !first_boolean_quote &amp;&amp; !second_boolean_comma) {</span>
-<span class="fc" id="L16">                complete_line.append(iterator).append(separator_in_final_result);</span>
-<span class="fc" id="L17">                iterator = 0;</span>
+<span class="nc" id="L11">        int iterator = 0;</span>
+<span class="nc" id="L12">        boolean first_boolean_quote = false;</span>
+<span class="nc" id="L13">        boolean second_boolean_comma = false;</span>
+<span class="nc bnc" id="L14" title="All 2 branches missed.">        while(!cvsText.isEmpty()) {</span>
+<span class="nc bnc" id="L15" title="All 6 branches missed.">            if(cvsText.startsWith(String.valueOf(delimeter)) &amp;&amp; !first_boolean_quote &amp;&amp; !second_boolean_comma) {</span>
+<span class="nc" id="L16">                complete_line.append(iterator).append(separator_in_final_result);</span>
+<span class="nc" id="L17">                iterator = 0;</span>
             }
 
-<span class="fc bfc" id="L20" title="All 4 branches covered.">            else if(cvsText.startsWith(&quot;\&quot;&quot;) &amp;&amp; iterator == 0) {</span>
-<span class="fc bfc" id="L21" title="All 2 branches covered.">                if(first_boolean_quote) {</span>
-<span class="fc" id="L22">                    first_boolean_quote = false;</span>
+<span class="nc bnc" id="L20" title="All 4 branches missed.">            else if(cvsText.startsWith(&quot;\&quot;&quot;) &amp;&amp; iterator == 0) {</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">                if(first_boolean_quote) {</span>
+<span class="nc" id="L22">                    first_boolean_quote = false;</span>
                 }
                 else {
-<span class="fc" id="L25">                    int q = cvsText.indexOf(&quot;\&quot;&quot;, 1);</span>
-<span class="pc bpc" id="L26" title="1 of 2 branches missed.">                    if (q != -1) {</span>
-<span class="fc" id="L27">                        first_boolean_quote = true;</span>
+<span class="nc" id="L25">                    int q = cvsText.indexOf(&quot;\&quot;&quot;, 1);</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">                    if (q != -1) {</span>
+<span class="nc" id="L27">                        first_boolean_quote = true;</span>
                     } else {
 <span class="nc" id="L29">                        iterator++;</span>
                     }
-<span class="fc" id="L31">                }</span>
+<span class="nc" id="L31">                }</span>
             }
-<span class="pc bpc" id="L33" title="1 of 4 branches missed.">            else if(cvsText.startsWith(&quot;\&quot;&quot;) &amp;&amp; iterator != 0) {</span>
-<span class="fc bfc" id="L34" title="All 2 branches covered.">                if(first_boolean_quote) {</span>
-<span class="fc" id="L35">                    first_boolean_quote = false;</span>
+<span class="nc bnc" id="L33" title="All 4 branches missed.">            else if(cvsText.startsWith(&quot;\&quot;&quot;) &amp;&amp; iterator != 0) {</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">                if(first_boolean_quote) {</span>
+<span class="nc" id="L35">                    first_boolean_quote = false;</span>
                 }
                 else {
-<span class="fc" id="L38">                    iterator++;</span>
+<span class="nc" id="L38">                    iterator++;</span>
                 }
             }
-<span class="pc bpc" id="L41" title="3 of 4 branches missed.">            else if(cvsText.indexOf('/')==0 &amp;&amp; cvsText.indexOf('*')==1) {</span>
+<span class="nc bnc" id="L41" title="All 4 branches missed.">            else if(cvsText.indexOf('/')==0 &amp;&amp; cvsText.indexOf('*')==1) {</span>
 <span class="nc" id="L42">                second_boolean_comma = true;</span>
             }
-<span class="pc bpc" id="L44" title="3 of 4 branches missed.">            else if(cvsText.indexOf('*')==0 &amp;&amp; cvsText.indexOf('/')==1) {</span>
+<span class="nc bnc" id="L44" title="All 4 branches missed.">            else if(cvsText.indexOf('*')==0 &amp;&amp; cvsText.indexOf('/')==1) {</span>
 <span class="nc" id="L45">                second_boolean_comma = false;cvsText = cvsText.substring(1);</span>
             }
-<span class="pc bpc" id="L47" title="1 of 2 branches missed.">            else if (!second_boolean_comma){</span>
-<span class="fc" id="L48">                iterator++;</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            else if (!second_boolean_comma){</span>
+<span class="nc" id="L48">                iterator++;</span>
             }
-<span class="fc" id="L50">            cvsText = cvsText.substring(1);</span>
+<span class="nc" id="L50">            cvsText = cvsText.substring(1);</span>
         }
-<span class="fc bfc" id="L52" title="All 2 branches covered.">        if(iterator !=0) {</span>
-<span class="fc" id="L53">            complete_line.append(iterator);}</span>
-<span class="fc" id="L54">        return complete_line.toString();</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        if(iterator !=0) {</span>
+<span class="nc" id="L53">            complete_line.append(iterator);}</span>
+<span class="nc" id="L54">        return complete_line.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

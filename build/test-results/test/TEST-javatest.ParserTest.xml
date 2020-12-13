@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="javatest.ParserTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2020-10-19T21:30:03" hostname="DESKTOP-L2D1GA5" time="0.201">
+<testsuite name="javatest.ParserTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2020-12-13T14:25:09" hostname="DESKTOP-L2D1GA5" time="0.116">
   <properties/>
-  <testcase name="test_custom_separator_and_quote_but_double_quotes_in_column()" classname="javatest.ParserTest" time="0.008"/>
-  <testcase name="test_custom_line_double_commas()" classname="javatest.ParserTest" time="0.006"/>
-  <testcase name="test_custom_line_with_custom_separator_is_delimeter_with_double_commas()" classname="javatest.ParserTest" time="0.002"/>
-  <testcase name="test_delimeter_and_separator_but_delimeter_in_column()" classname="javatest.ParserTest" time="0.002"/>
-  <testcase name="test_custom_line_with_custom_separator()" classname="javatest.ParserTest" time="0.006"/>
-  <testcase name="test_custom_delimeter()" classname="javatest.ParserTest" time="0.003"/>
-  <testcase name="test_parse_of_line_with_custom_separators_and_default_quote()" classname="javatest.ParserTest" time="0.003"/>
-  <testcase name="test_parse_of_line_with_default_separator_and_quote()" classname="javatest.ParserTest" time="0.003"/>
-  <testcase name="test_custom_line_with_custom_separator_is_delimeter()" classname="javatest.ParserTest" time="0.003"/>
-  <testcase name="test_custom_line_with_custom_separator_with_zero_answer_with_double_commas()" classname="javatest.ParserTest" time="0.006"/>
-  <testcase name="test_custom_line_double_commas_blank()" classname="javatest.ParserTest" time="0.004"/>
-  <testcase name="test_custom_line_null()" classname="javatest.ParserTest" time="0.005"/>
-  <testcase name="test_custom_line_zero()" classname="javatest.ParserTest" time="0.003"/>
-  <testcase name="test_custom_line_with_custom_separator_is_delimeter_with_double_commas_separator_comma()" classname="javatest.ParserTest" time="0.006"/>
-  <testcase name="test_custom_line_with_custom_separator_with_zero_answer()" classname="javatest.ParserTest" time="0.002"/>
-  <testcase name="test_custom_delimeter_and_separator()" classname="javatest.ParserTest" time="0.013"/>
+  <testcase name="test_custom_separator_and_quote_but_double_quotes_in_column()" classname="javatest.ParserTest" time="0.004"/>
+  <testcase name="test_custom_line_double_commas()" classname="javatest.ParserTest" time="0.004"/>
+  <testcase name="test_custom_line_with_custom_separator_is_delimeter_with_double_commas()" classname="javatest.ParserTest" time="0.006"/>
+  <testcase name="test_delimeter_and_separator_but_delimeter_in_column()" classname="javatest.ParserTest" time="0.004"/>
+  <testcase name="test_custom_line_with_custom_separator()" classname="javatest.ParserTest" time="0.007"/>
+  <testcase name="test_custom_delimeter()" classname="javatest.ParserTest" time="0.001"/>
+  <testcase name="test_parse_of_line_with_custom_separators_and_default_quote()" classname="javatest.ParserTest" time="0.002"/>
+  <testcase name="test_parse_of_line_with_default_separator_and_quote()" classname="javatest.ParserTest" time="0.03"/>
+  <testcase name="test_custom_line_with_custom_separator_is_delimeter()" classname="javatest.ParserTest" time="0.001"/>
+  <testcase name="test_custom_line_with_custom_separator_with_zero_answer_with_double_commas()" classname="javatest.ParserTest" time="0.002"/>
+  <testcase name="test_custom_line_double_commas_blank()" classname="javatest.ParserTest" time="0.001"/>
+  <testcase name="test_custom_line_null()" classname="javatest.ParserTest" time="0.0"/>
+  <testcase name="test_custom_line_zero()" classname="javatest.ParserTest" time="0.0"/>
+  <testcase name="test_custom_line_with_custom_separator_is_delimeter_with_double_commas_separator_comma()" classname="javatest.ParserTest" time="0.002"/>
+  <testcase name="test_custom_line_with_custom_separator_with_zero_answer()" classname="javatest.ParserTest" time="0.0"/>
+  <testcase name="test_custom_delimeter_and_separator()" classname="javatest.ParserTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
